@@ -13,14 +13,15 @@ import RxSwift
 
 class ViewController: UIViewController {
 
-    let disposeBag = DisposeBag()
     @IBOutlet weak var header: UIView!
     @IBOutlet weak var pickupResults: UITableView!
     @IBOutlet weak var dropoffResults: UITableView!
     @IBOutlet weak var pickupField: UITextField!
     @IBOutlet weak var dropoffField: UITextField!
+    
     let pickupSource = GMSAutocompleteTableDataSource()
     let dropoffSource = GMSAutocompleteTableDataSource()
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +29,14 @@ class ViewController: UIViewController {
         bindModels(textField: pickupField, table: pickupResults, source: pickupSource)
         bindModels(textField: dropoffField, table: dropoffResults, source: dropoffSource)
     }
+    
     func setupView() {
         header.layer.masksToBounds = false
         header.layer.shadowOffset = CGSize(width: 1, height: 1)
         header.layer.shadowRadius = 3
         header.layer.shadowOpacity = 0.3
     }
+    
     func bindModels(textField: UITextField, table: UITableView, source: GMSAutocompleteTableDataSource) {
         table.delegate = source
         table.dataSource = source

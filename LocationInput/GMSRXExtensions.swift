@@ -29,7 +29,7 @@ open class RxGMSDataSourceDelegateProxy
         register { RxGMSDataSourceDelegateProxy(dataSource: $0) }
     }
 
-    var placeBehaviorSubject = BehaviorSubject<GMSPlace?>(value: nil)
+    public var placeBehaviorSubject = BehaviorSubject<GMSPlace?>(value: nil)
 
     public func tableDataSource(_ tableDataSource: GMSAutocompleteTableDataSource, didAutocompleteWith place: GMSPlace) {
         placeBehaviorSubject.on(.next(place))
@@ -49,7 +49,7 @@ extension Reactive where Base == GMSAutocompleteTableDataSource{
         return RxGMSDataSourceDelegateProxy.proxy(for: base)
     }
     
-    var sourceText:Binder<String?> {
+    public var sourceText:Binder<String?> {
         return Binder(self.base) { (dataSource, text: String?) in
             dataSource.sourceTextHasChanged(text)
         }
