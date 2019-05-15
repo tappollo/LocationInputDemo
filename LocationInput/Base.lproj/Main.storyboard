@@ -60,20 +60,27 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Start" translatesAutoresizingMaskIntoConstraints="NO" id="Miy-tH-dAe">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pickup" translatesAutoresizingMaskIntoConstraints="NO" id="Miy-tH-dAe">
                                         <rect key="frame" x="36" y="70" width="8" height="8"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="8" id="ms0-b5-JPY"/>
                                             <constraint firstAttribute="height" constant="8" id="pdm-YT-Ywl"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="End" translatesAutoresizingMaskIntoConstraints="NO" id="x3S-7q-4SY">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dropoff" translatesAutoresizingMaskIntoConstraints="NO" id="x3S-7q-4SY">
                                         <rect key="frame" x="36" y="114" width="8" height="8"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="8" id="7VW-uM-cMV"/>
                                             <constraint firstAttribute="height" constant="8" id="lfz-wP-fGL"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYt-W0-lDS">
+                                        <rect key="frame" x="39.5" y="82" width="1" height="28"/>
+                                        <color key="backgroundColor" red="0.10157910734415054" green="0.26318642497062683" blue="0.61180084943771362" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="mW7-0P-8dO"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -82,8 +89,11 @@
                                     <constraint firstItem="wXr-Pf-MtG" firstAttribute="centerY" secondItem="x3S-7q-4SY" secondAttribute="centerY" id="6Bf-sF-dKL"/>
                                     <constraint firstItem="lJ0-rK-vyn" firstAttribute="leading" secondItem="Miy-tH-dAe" secondAttribute="trailing" constant="24" id="9gq-Qh-abf"/>
                                     <constraint firstAttribute="height" constant="148" id="GdS-rE-yQI"/>
+                                    <constraint firstItem="BYt-W0-lDS" firstAttribute="centerX" secondItem="Miy-tH-dAe" secondAttribute="centerX" id="R6o-Lq-zxN"/>
+                                    <constraint firstItem="x3S-7q-4SY" firstAttribute="top" secondItem="BYt-W0-lDS" secondAttribute="bottom" constant="4" id="U1w-cp-3YE"/>
                                     <constraint firstAttribute="trailing" secondItem="lJ0-rK-vyn" secondAttribute="trailing" constant="24" id="Va0-Qi-3A9"/>
                                     <constraint firstItem="wXr-Pf-MtG" firstAttribute="leading" secondItem="x3S-7q-4SY" secondAttribute="trailing" constant="24" id="ZqJ-75-TXg"/>
+                                    <constraint firstItem="BYt-W0-lDS" firstAttribute="top" secondItem="Miy-tH-dAe" secondAttribute="bottom" constant="4" id="eOi-Pc-3Jl"/>
                                     <constraint firstItem="lJ0-rK-vyn" firstAttribute="centerY" secondItem="Miy-tH-dAe" secondAttribute="centerY" id="juQ-LK-mdR"/>
                                     <constraint firstItem="x3S-7q-4SY" firstAttribute="top" secondItem="Miy-tH-dAe" secondAttribute="bottom" constant="36" id="mUu-HO-K39"/>
                                     <constraint firstItem="x3S-7q-4SY" firstAttribute="centerX" secondItem="Miy-tH-dAe" secondAttribute="centerX" id="pQj-88-X5H"/>
@@ -131,7 +141,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="End" width="4" height="4"/>
-        <image name="Start" width="4" height="4"/>
+        <image name="Dropoff" width="6" height="6"/>
+        <image name="Pickup" width="6" height="6"/>
     </resources>
 </document>
